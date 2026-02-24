@@ -60,7 +60,7 @@ A *Lightweight* RV32I/EMC *MCU Framework* with *128KiB* OCM, 1xXPI, 2xSPISD/SDIO
         text("Reproduced", size: 8pt, weight: "medium"),
         text("Tapedout", size: 8pt, weight: "medium"),
         circle(radius: 4pt, stroke: black, fill: yellow.lighten(60%)),
-        circle(radius: 4pt, stroke: black, fill: yellow.lighten(60%)),
+        circle(radius: 4pt, stroke: black, fill: white),
         circle(radius: 4pt, stroke: black, fill: white),
         circle(radius: 4pt, stroke: black, fill: white),
       )
@@ -93,14 +93,14 @@ A *Lightweight* RV32I/EMC *MCU Framework* with *128KiB* OCM, 1xXPI, 2xSPISD/SDIO
     - PLL for core clock *(24\~192MHz)*
     - PLL or Bypass mode
 
-  - XPI
+  - XPI *(SDR mode only)*
     - Half-duplex, SPI/DPI/QSPI/QPI mode
     - 32x32b TX/RX dual FIFO Integrated
-    - 32x32b TX/RX dual FIFO Integrated
+    - Register/Memory-mapped/DMA
 
   - SPISD/SDIO (SDHC, 4\~32GB)
     - *1GiB* Memory-mapped access
-    - 1/4-wire SPI/SDIO mode *(SDv2.0)*
+    - 1/4-wire SPI or SDIO mode *(SDv2.0)*
     - 512B cache, 50MHz maximum freq.
 
   - I2S (HQ, Hi-Res audio)
@@ -110,15 +110,15 @@ A *Lightweight* RV32I/EMC *MCU Framework* with *128KiB* OCM, 1xXPI, 2xSPISD/SDIO
 
   #colbreak()
 
-  - DVP ()
-    - Stereo input/output only
-    - max *24b/96KHz* format support
-    - Full-duplex, I2S Phillips only
+  - DVP (Camera interface)
+    - 8-bit parallel input mode
+    - max *2M* image sensor support
+    - RGB565 format support only
 
-  - APU/GA ()
-    - Stereo input/output only
-    - max *24b/96KHz* format support
-    - Full-duplex, I2S Phillips only
+  - APU/GA\* *(Experimental integrate)*
+    - Audio Keyword Wake-Up (CNN)
+    - Simple 2D/3D graphics render
+    - High performance DMA engine
 
   - Other Communication Interfaces
     - 2xUARTs (FIFO/No FIFO)
