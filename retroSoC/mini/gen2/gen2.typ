@@ -31,11 +31,11 @@
 )
 
 Datasheet (rev.3 – 2026.02.15) \
-Yuchi Miao (#link("miaoyuchi@ict.ac.cn")) \
+*Author:* Yuchi Miao (#link("miaoyuchi@ict.ac.cn")) \
 *Maintained by* _ECOS Team, ICT, CAS_
 
 #line(length: 100%)
-A *Lightweight* RV32I/EMC *MCU Framework* with *128KiB* OCM, 1xXPI, 2xSPISD/SDIO, 1xPSRAM, 1xSDRAM, 24xGPIO, 1xDMA, 3xTIMER, 1xRTC, 1xWDG, 4xPWM, 2xUART, 1xI2C, 1xONEWIRE, 1xPS2, 1xARCHINFO, 1xSYSCTRL, 1xRCU, 1xRNG, 1xCRC, 1xI2S, 1xDVP, 1xAPU\*, 1xGA\*, 1xCRC, 1xRNG
+A *Lightweight* RV32I/EMC *MCU Framework* with *128KiB* OCM, 1xXPI, 2xSPISD/SDIO, 1xPSRAM, 1xSDRAM, 24xGPIO, 1xDMA, 3xTIMER, 1xRTC, 1xWDG, 4xPWM, 2xUART, 2xI2C, 1xONEWIRE, 1xPS2, 1xARCHINFO, 1xSYSCTRL, 1xRCU, 1xRNG, 1xCRC, 1xI2S, 1xDVP, 1xAPU\*, 1xGA\*, 1xCRC, 1xRNG
 #line(length: 100%)
 
 
@@ -79,7 +79,7 @@ A *Lightweight* RV32I/EMC *MCU Framework* with *128KiB* OCM, 1xXPI, 2xSPISD/SDIO
 
   - Memories
     - *0\~128KiB* On-Chip-RAM *(OCM)*
-    - *16MiB* XPI NOR Flash Controller
+    - *32MiB* XPI NOR Flash Controller
     - *8MiB* PSRAM Controller
     - *64MiB* 16bit SDRAM Controller
 
@@ -160,16 +160,25 @@ A *Lightweight* RV32I/EMC *MCU Framework* with *128KiB* OCM, 1xXPI, 2xSPISD/SDIO
 
 
 == Overview
-_*retroSoC*_ is a fully open-source and customizable ASIC framework for _*“retro-style”*_ applications. It is both straightforward to use and highly compatible with EDA toolchains — specifically targeting open-source EDA *(iEDA, OpenROAD, etc)*.
+_*retroSoC*_ is a fully open-source and customizable ASIC framework for _*“retro-style”*_ applications(handheld game consoles, system). And of ECOS Team.\
+(story, target, my thinking, be dedicated to retro multimedia area, full open source, focus on funny)
+(insert a retro poster/diagram to descripte the motivation[why])
 
-Additionally, retroSoC can also serve as a flexible, reconfigurable *SoC template* for end customers or students who want to integrate their own design into a shared fabrication wafer *(shuttle)*.
+- *Open source*: It is both straightforward to use and highly compatible with EDA toolchains — specifically targeting open-source EDA *(iEDA, OpenROAD, etc)*.
 
-The _*retroSoC Mini Series*_ is a family of highly integrated, lightweight MCU designed for Internet of Things *(IoT)* scenarios. _*retroSoC Mini Gen2/Gen2+*_ adopts the PicoRV32/Hazard3 core and integrates DMA, SPISD/SDIO, SDRAM, I2S and XPI multimedia IPs. It can be used for a wide variety of applications as wearables, education or ASIC prototype verification.
+- *HW-SW co*:
 
-(insert a image to descripte the motivation)
-#lorem(240)
+- *Time to market*: focus on the funcitonality, seprate into 4 series
+
+- *Lower the price*: Additionally, retroSoC can also serve as a flexible, reconfigurable *SoC template* for end customers or students who want to integrate their own design into a shared fabrication wafer *(shuttle)*.
+
+- *Well documented*: balba
+
+The _*retroSoC Mini Series*_ is a family of highly integrated, lightweight MCU designed for Internet of Things *(IoT)* scenarios. _*retroSoC Mini Gen2/Gen2+*_ adopts the PicoRV32/Hazard3 core and integrates DMA, SPISD/SDIO, SDRAM, I2S and XPI IPs. It can be used for a wide variety of applications as wearables, education or ASIC prototype verification.
+#lorem(380)
 
 == Product Series
+#lorem(100)
 #figure(
   image(
     "retroSoC-Product-Series.svg",
@@ -181,6 +190,7 @@ The _*retroSoC Mini Series*_ is a family of highly integrated, lightweight MCU d
 )<product-series>
 
 == Roadmap
+#lorem(100)
 #figure(
   image(
     "retroSoC-Roadmap.svg",
@@ -212,13 +222,15 @@ The _*retroSoC Mini Series*_ is a family of highly integrated, lightweight MCU d
 }
 
 #table(
-  columns: (1fr, 1fr, 1fr),
-  [Date], [Version], [Release Note],
-  [2025-09-28], [v0.1], [Create document],
-  [2025-12-02], [v0.2], [Initial draft],
-  [2026-02-15], [v0.3], [Initial release],
+  columns: (1fr, 1fr, 1fr, 1fr),
+  [Date], [Version], [Release Note], [Author],
+  [2025-09-28], [v0.1], [Create document], [Yuchi Miao],
+  [2025-12-02], [v0.2], [Initial draft], [Yuchi Miao],
+  [2026-02-15], [v0.3], [Initial release], [Yuchi Miao],
 )
 
+== License
+#lorem(60)
 #pagebreak()
 
 #outline()
